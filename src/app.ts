@@ -16,6 +16,10 @@ app.use(
   })
 );
 
+// Routes
+// app.use("/api/v1/auth", authRouter);
+// app.use("/api/auth", authRoutes);
+
 // Default route for testing
 app.get("/", (_req, res) => {
   res.send("My Portfolio Website is Running");
