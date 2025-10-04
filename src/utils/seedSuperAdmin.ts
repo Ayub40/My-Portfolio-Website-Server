@@ -23,7 +23,7 @@ export async function seedSuperAdmin() {
             email: superAdminEmail,
             password: hashedPassword,
             role: "SUPER_ADMIN",
-            name: "Super Admin",
+            name: "Ayub Khan",
         },
     });
 

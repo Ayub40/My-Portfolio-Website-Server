@@ -3,11 +3,12 @@ import cors from "cors";
 import express from "express";
 import { authRouter } from "./modules/auth/auth.routes";
 import { postRouter } from "./modules/post/post.routes";
+import { userRouter } from "./modules/user/user.routes";
 
 const app = express();
 
 // Middleware
-app.use(cors()); // Enables Cross-Origin Resource Sharing
+// app.use(cors()); // Enables Cross-Origin Resource Sharing
 app.use(compression()); // Compresses response bodies for faster delivery
 app.use(express.json()); // Parse incoming JSON requests
 
@@ -19,6 +20,7 @@ app.use(
 );
 
 // Routes
+app.use("/api/v1/user", userRouter);
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/post", postRouter);
 

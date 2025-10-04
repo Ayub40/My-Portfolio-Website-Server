@@ -16,10 +16,10 @@ const loginWithEmailAndPassword = async ({ email, password }: { email: string, p
     }
 
     // Password do not show
-    const { password: _, ...userWithoutPassword } = user;
-    return userWithoutPassword;
+    // const { password: _, ...userWithoutPassword } = user;
+    // return userWithoutPassword;
 
-    // return user
+    return user
 };
 
 export const AuthService = {
