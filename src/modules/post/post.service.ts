@@ -119,7 +119,8 @@ const getBlogStat = async () => {
 
         const topFeatured = await tx.post.findFirst({
             where: { isFeatured: true },
-            orderBy: { views: "desc" }
+            // orderBy: { views: "desc" }
+            orderBy: { views: "asc" }
         })
 
         const lastWeek = new Date();

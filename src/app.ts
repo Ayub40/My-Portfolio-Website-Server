@@ -9,13 +9,23 @@ import { projectRouter } from "./modules/project/project.routes";
 const app = express();
 
 // Middleware
-// app.use(cors()); // Enables Cross-Origin Resource Sharing
 app.use(compression()); // Compresses response bodies for faster delivery
 app.use(express.json()); // Parse incoming JSON requests
 
+// app.use(
+//   cors({
+//     // origin: "http://localhost:3000",
+//     origin: "my-portfolio-website-client.vercel.app",
+//     credentials: true,
+//   })
+// );
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: [
+      "http://localhost:3000",
+      "https://my-portfolio-website-client.vercel.app",
+    ],
     credentials: true,
   })
 );

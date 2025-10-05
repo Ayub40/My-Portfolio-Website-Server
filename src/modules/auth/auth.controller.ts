@@ -14,3 +14,4 @@ const loginWithEmailAndPassword = async (req: Request, res: Response) => {
 export const AuthController = {
     loginWithEmailAndPassword
 }
+
